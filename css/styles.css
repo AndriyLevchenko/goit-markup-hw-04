@@ -2,7 +2,8 @@
     --secondery-text-color: #212121;
     --accent-color: #2196F3;
     --primary-text-color: #757575;
-    --primary-white-color: #FFFFFF; 
+    --primary-white-color: #FFFFFF;
+    --icon-primary: #AFB1B8;
 }
 body {
     font-size: 14px;
@@ -67,7 +68,6 @@ cursor: pointer;
 display: flex;
 align-items: center;
 }
-
 .header-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -83,7 +83,36 @@ align-items: center;
     display: inline-block;
 }
 .header-item-mail:not(:last-child) {
-    margin-right: 50px; 
+    margin-right: 30px;
+}
+.icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+.header-mail {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+.header-tel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-item-mail .header-mail:hover,
+.header-item-mail .header-mail:focus,
+.header-item-tel .header-tel:hover,
+.header-item-tel .header-tel:focus {
+    color: var(--accent-color);
+    fill: currentColor;
 }
 .header-tel {
     margin-left: auto; 
@@ -110,19 +139,23 @@ align-items: center;
 }
 .hero {
     background-color: #2F303A; 
-
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
     text-align: center;
     padding: 200px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero-text{
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-
     margin-bottom: 30px;
     width: 696px;
     margin-left: auto;
@@ -139,7 +172,6 @@ align-items: center;
     background-color: var(--accent-color);
     border-radius: 4px;
     border: none;
-
     padding: 10px 32px;
 }
 .hero-btn:hover,
@@ -155,7 +187,12 @@ align-items: center;
 .benefits-item {
     width: 270px;
 }
-.benefits-title, .about-title, .team-title {
+.group {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+.benefits-title, .about-title, .team-title, .our-clients-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -184,7 +221,6 @@ align-items: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondery-text-color);
-
     margin-bottom: 10px;
 }
 .benefits-title-novisual, .portfolio-name-novisual {
@@ -220,8 +256,8 @@ align-items: center;
     display: block;
 }
 .team-people {
-   padding: 30px 0;
-    
+    padding-top: 30px;
+    margin-bottom: 16px;
 }
 .team-name {
     font-weight: 500;
@@ -239,6 +275,56 @@ align-items: center;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+}
+.team-soc-link {
+    width: 44px;
+    height: 44px;
+    background-color: #F5F4FA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-soc-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-primary);
+}
+.team-soc-link:hover, .team-soc-link:focus {
+    background-color: var(--accent-color);
+}
+.team-soc-link:hover .team-soc-icon, .team-soc-link:focus .team-soc-icon {
+    fill: var(--primary-white-color);
+}
+.team-soc-list {
+    display: flex;
+    justify-content: center;
+}
+.team-soc-item {
+    padding-bottom: 30px;
+}
+.team-soc-item + .team-soc-item {
+    margin-left: 10px;
+}
+.icon-our-clients {
+    width: 172px;
+    height: 94px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    fill: var(--icon-primary);
+}
+.icon-our-clients:hover, 
+.icon-our-clients:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);    
+}
+.our-clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+.our-clients-list {
+    display: flex;
 }
 .footer {
     background-color: #2F303A;
@@ -266,8 +352,47 @@ align-items: center;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 9px;
 }
-.footer-mail:hover, .footer-tel:hover, .header-mail:hover, .header-tel:hover, .header-link:hover, .footer-mail:focus, .footer-tel:focus, .header-mail:focus, .header-tel:focus, .header-link:focus {
-    color: var(--accent-color)
+.footer-list {
+    padding-right: 70px;
+}
+.footer-mail:hover, .footer-tel:hover, .header-link:hover, .footer-mail:focus, .footer-tel:focus, .header-link:focus {
+    color: var(--accent-color);
+}
+.footer-soc-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-white-color);
+}
+.footer-soc-link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-soc-link:hover, .footer-soc-link:focus {
+    background-color: var(--accent-color);
+}
+.footer-soc-list {
+    display: flex;
+}
+.footer-soc-item + .footer-soc-item {
+    margin-left: 10px;
+}
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.footer-cont {
+    display: flex;
+    align-items: baseline;
 }
 .choice-list {
     display: flex;
@@ -276,6 +401,11 @@ align-items: center;
 }
 .choice-item:not(:last-child) {
     margin-right: 8px;
+}
+.choice-item:hover,
+.choice-item:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 .choice-btn {
     font-weight: 500;
@@ -295,12 +425,12 @@ align-items: center;
     color: var(--primary-white-color);
     background-color: var(--accent-color)
 }
-.portfolio {
-    /* padding: 94px 0; */
-}
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
+}
+.portfolio-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-item:not(:last-child) {
     margin-right: 30px;
