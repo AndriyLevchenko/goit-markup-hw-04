@@ -190,14 +190,15 @@ align-items: center;
 .group {
     width: 70px;
     height: 70px;
-    margin: 25px 100px;
 }
 .group-size {
-    width: 270px;
     height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .benefits-title, .about-title, .team-title, .our-clients-title {
     font-weight: 700;
@@ -335,6 +336,9 @@ align-items: center;
     background-color: #2F303A;
     padding: 60px 0;
 }
+.footer-adres {
+    margin-right: 70px;
+}
 .footer-item:not(:last-child) {
     margin-bottom: 9px;
 }
@@ -356,9 +360,6 @@ align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 9px;
-}
-.footer-list {
-    padding-right: 70px;
 }
 .footer-mail:hover, .footer-tel:hover, .header-link:hover, .footer-mail:focus, .footer-tel:focus, .header-link:focus {
     color: var(--accent-color);
